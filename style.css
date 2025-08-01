@@ -1,0 +1,149 @@
+/* Theme Variables */
+body.theme-light {
+  --accent: #4a90e2;
+  --accent-dark: #2366b8;
+  --light-text: #222;
+  --dark-text: #fff;
+  --color-text: #4a2e6e;
+  --card-bg: #fff;
+  --card-hover-bg: #f3f6fa;
+  background: #f8f9fa;
+  color: var(--light-text);
+}
+
+body.theme-dark {
+  --accent: #8ecfff;
+  --accent-dark: #4a90e2;
+  --light-text: #fff;
+  --dark-text: #f8f9fa;
+  --color-text: #e0e0ff;
+  --card-bg: #23272f;
+  --card-hover-bg: #2e323a;
+  background: #181b20;
+  color: var(--dark-text);
+}
+
+body.theme-colorful {
+  --accent: #e94f8b;
+  --accent-dark: #b83260;
+  --light-text: #4a2e6e;
+  --dark-text: #fff;
+  --color-text: #e94f8b;
+  --card-bg: #fff0fa;
+  --card-hover-bg: #ffe6fa;
+  background: linear-gradient(120deg, #ffe6fa 60%, #e0f7fa 100%);
+  color: var(--color-text);
+}
+/* 🛠️ Fix for bullets & numbers when using Bootstrap list-group-item */
+.list-style-bulleted li,
+.list-style-numbered li {
+  /* Make sure the element generates list markers again */
+  display: list-item !important;
+  /* Position marker inside your extra padding */
+  list-style-position: inside !important;
+}
+
+/* List Styles */
+.list-style-bulleted {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+.list-style-bulleted li {
+  position: relative;
+  background: linear-gradient(90deg, #f8f9fa 80%, #e3e6ed 100%);
+  border-radius: 0.4rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0.6rem 1rem 0.6rem 2.2rem; /* extra left padding for bullet */
+}
+.list-style-bulleted li::marker {
+  color: var(--accent);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.list-style-bulleted li:hover {
+  background: linear-gradient(90deg, #e3e6ed 60%, #cbe7ff 100%);
+  transform: scale(1.03);
+}
+
+.list-style-numbered {
+  list-style-type: decimal;
+  padding-left: 2rem;
+}
+.list-style-numbered li {
+  position: relative;
+  background: linear-gradient(90deg, #f8f9fa 80%, #e3e6ed 100%);
+  border-radius: 0.4rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0.6rem 1rem 0.6rem 2.2rem; /* extra left padding for number */
+}
+.list-style-numbered li::marker {
+  color: var(--accent);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.list-style-numbered li:hover {
+  background: linear-gradient(90deg, #e3e6ed 60%, #cbe7ff 100%);
+  transform: scale(1.03);
+}
+
+/* Card List Style */
+.list-style-card {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.list-style-card li {
+  background: var(--card-bg, #fff);
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(60,60,90,0.10);
+  padding: 1.1rem 1.3rem;
+  border-left: 6px solid var(--accent, #4a90e2);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.list-style-card li:hover {
+  background: var(--card-hover-bg, #f3f6fa);
+  transform: scale(1.03) translateX(8px);
+  box-shadow: 0 6px 24px 0 rgba(74,144,226,0.13);
+}
+
+/* Card and Form Styling for Dark Theme */
+body.theme-dark .card,
+body.theme-dark .card-header,
+body.theme-dark .card-body {
+  background: var(--card-bg, #23272f) !important;
+  color: var(--dark-text) !important;
+  border-color: #23272f !important;
+}
+
+body.theme-dark .form-select,
+body.theme-dark .form-label {
+  background: #23272f !important;
+  color: var(--dark-text) !important;
+  border-color: #444 !important;
+}
+
+body.theme-dark .list-group-item {
+  background: #23272f !important;
+  color: var(--dark-text) !important;
+  border-color: #23272f !important;
+}
+
+/* Optional: Make Bootstrap buttons dark in dark mode */
+body.theme-dark .btn {
+  background: #181b20 !important;
+  color: var(--dark-text) !important;
+  border-color: #444 !important;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 767px) {
+  .card {
+    margin: 0 auto;
+  }
+}

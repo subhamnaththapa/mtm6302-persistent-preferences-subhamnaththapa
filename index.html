@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Persistent Preferences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-light">
+
+  <div class="container py-5">
+    <div class="row g-4">
+
+      <!-- List Section -->
+      <section class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-white border-0">
+            <h2 class="card-title mb-0">Your Items</h2>
+          </div>
+          <ul id="item-list" class="list-group list-group-flush list-style-bulleted">
+            <!-- items injected by script.js -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Preferences Panel -->
+      <aside class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-white border-0">
+            <h2 class="card-title mb-0">Preferences</h2>
+          </div>
+          <div class="card-body">
+            <form id="prefs-form" class="row gy-3">
+              <!-- Theme Selector -->
+              <div class="col-12">
+                <label for="theme-select" class="form-label">Theme</label>
+                <select id="theme-select" class="form-select">
+                  <option value="light">🌞 Light</option>
+                  <option value="dark">🌙 Dark</option>
+                  <option value="colorful">🌈 Colorful</option>
+                </select>
+              </div>
+              <!-- List Style Selector -->
+              <div class="col-12">
+                <label for="list-style-select" class="form-label">List Style</label>
+                <select id="list-style-select" class="form-select">
+                  <option value="bulleted">• Bulleted</option>
+                  <option value="numbered">1. Numbered</option>
+                  <option value="card">▢ Card</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
